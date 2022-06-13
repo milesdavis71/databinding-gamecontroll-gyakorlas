@@ -31,14 +31,9 @@
       </ol>
     </div>
     <div class="col-xs-12">
-      <app-game-control>
-        <div class="col-xs-12">
-          <button class="btn btn-primary" (click)="increaseNumber()" #counter>
-            Start game
-          </button>
-          <button class="btn btn-danger">Stop game</button>
-        </div>
-      </app-game-control>
+      <app-game-control
+        (incrementedNumber)="onIncrementedNumber($event)"
+      ></app-game-control>
     </div>
   </div>
 </div>
