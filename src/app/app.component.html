@@ -33,8 +33,15 @@
     <div class="col-xs-12">
       <app-game-control
         (incrementedNumber)="onIncrementedNumber($event)"
-
       ></app-game-control>
+      <app-odd
+        *ngFor="let oddNumber of oddNumbers"
+        [oddNum]="oddNumber"
+      ></app-odd>
+      <app-even
+        *ngFor="let evenNumber of evenNumbers"
+        [evenNum]="evenNumber"
+      ></app-even>
     </div>
   </div>
 </div>

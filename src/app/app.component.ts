@@ -6,15 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  oddNumber: number;
-  evenNumber: number;
   oddNumbers = [];
   evenNumbers = [];
   onIncrementedNumber(lastNumber: number) {
-    console.log(lastNumber);
-  }
-
-  onAddEven() {
-    this.evenNumbers.push(this.evenNumber);
+    lastNumber % 2 === 0
+      ? this.evenNumbers.push(lastNumber)
+      : this.oddNumbers.push(lastNumber);
   }
 }
