@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   oddNumbers = [];
   evenNumbers = [];
-  onIncrementedNumber(lastNumber: number) {
+  onFiredNumber(lastNumber: number) {
     lastNumber % 2 === 0
       ? this.evenNumbers.push(lastNumber)
       : this.oddNumbers.push(lastNumber);

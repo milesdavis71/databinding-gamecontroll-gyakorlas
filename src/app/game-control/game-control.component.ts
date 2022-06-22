@@ -12,13 +12,13 @@ import {
   styleUrls: ['./game-control.component.css'],
 })
 export class GameControlComponent implements OnInit {
-  @Output() incrementedNumber = new EventEmitter<number>();
+  @Output() firedNumber = new EventEmitter<number>();
   interval;
   number = 0;
 
   onStartGame() {
     this.interval = setInterval(() => {
-      this.incrementedNumber.emit((this.number += 1));
+      this.firedNumber.emit((this.number += 1));
     }, 1000);
   }
 
